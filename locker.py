@@ -76,3 +76,9 @@ def __init__(self, account, userName, password):
         Method that returns all items in the credentials list
         '''
         return cls.credentials_list         
+       def generatePassword(stringLength=8):
+        '''
+        Generate a random password string of letters and digits and special characters
+        '''
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
+        return ''.join(random.choice(password) for i in 
