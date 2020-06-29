@@ -28,3 +28,8 @@ def save_user(self):
         method that deletes a saved account from the list
         '''
         User.user_list.remove(self)
+class Credentials():
+    '''
+    Create credentials class to create new objects of credentials
+    '''
+    credentials_list = []
