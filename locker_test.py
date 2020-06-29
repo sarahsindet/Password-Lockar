@@ -105,4 +105,14 @@ class TestCredentials(unittest.TestCase):
         get_credential = Credentials("instagram","feistydory","qwerty") 
         get_credential.save_details()
         credential_is_found = Credentials.if_credential_exist("instagram")
-        self.assertTrue(credential_is_found)
+        self.assertTrue(credential_is_found)def test_display_all_saved_credentials(self):
+        '''
+        method that returns a list of all credentials saved
+        '''
+
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+
+
+
+if __name__ == "__main__":
+    unittest.main() 
